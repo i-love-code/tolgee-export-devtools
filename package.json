@@ -1,0 +1,28 @@
+{
+  "name": "@tolgee/next-app-testapp",
+  "version": "5.28.6",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "develop": "next dev",
+    "build": "next build",
+    "build:e2e": "NEXT_BUILD_DIR=dist-e2e next build",
+    "start": "next start",
+    "clean": "rm -rf .next dist-e2e"
+  },
+  "dependencies": {
+    "@tolgee/format-icu": "^5.28.6",
+    "@tolgee/react": "^5.28.6",
+    "@tolgee/web": "^5.28.6",
+    "next": "14.2.5",
+    "next-intl": "^3.17.0",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
+  }
+}
