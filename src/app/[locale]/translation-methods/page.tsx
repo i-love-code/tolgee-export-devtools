@@ -15,10 +15,9 @@ export default async function TranslationMethods({
 	params: { locale },
 }: { params: { locale: string } }) {
 	unstable_setRequestLocale(locale);
-	const locales = await getStaticData(["en", locale]);
 
 	return (
-		<TolgeeNextProvider locale={locale} locales={locales}>
+		<TolgeeNextProvider locale={locale}>
 			<main className="translation-methods">
 				<Navbar>
 					<div slot="menu-items">
