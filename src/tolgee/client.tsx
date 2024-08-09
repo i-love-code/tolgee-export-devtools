@@ -10,7 +10,16 @@ type Props = {
 	children: React.ReactNode;
 };
 
-const tolgee = TolgeeBase().init();
+const tolgee = TolgeeBase()
+	.use((tolgee, tools) => {
+		tools.setDevBackend({
+			async getRecord() {
+				return undefined;
+			},
+		});
+		return tolgee;
+	})
+	.init();
 
 export const TolgeeNextProvider = ({ locale, children }: Props) => {
 	const fakeStaticData = ALL_LOCALES.reduce(
